@@ -1,0 +1,4 @@
+Display UI
+User will see a create button this will redirect the user to a form where they will enter the details they want to be displayed om the birthday card
+The added birthday card will be moved into the "Birthday Cards" section.
+When the user navigates to th birthday cards section the will have options to either either the birthday cards or delete the birthday card'

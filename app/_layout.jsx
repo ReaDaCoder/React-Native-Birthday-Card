@@ -44,8 +44,8 @@ function addCard(e){
   return (
     <SafeAreaView style={styles.container}>
       {/* <TextInput placeholder="Enter name"/> */}
-      <Text>{name}</Text>
-      <Text>{message}</Text>
+      <Text style={styles.text}>{name}</Text>
+      <Text style={styles.text}>{message}</Text>
       <Image
         source={require('@/assets/images/bday-img-bg.png')}
         style={{width:250, height:250, justifyContent: 'center',}}
@@ -91,6 +91,14 @@ const styles = StyleSheet.create({
     borderRadius:0.10,
     flex:1,
     paddingHorizontal:20
+  },
+  text:{
+    fontWeight:'700',
+    textAlign:"center",
+    fontStyle:'italic',
+    lineHeight:30,
+    fontSize:35,
+    borderColor:'grey'
   },
   input:{
     borderRadius:5,

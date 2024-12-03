@@ -31,16 +31,7 @@ export default function Cards(){
         <TableCell>Approved</TableCell>
         <TableCell>None</TableCell>
       </TableRow>
-      <TableRow>
-        <TableCell>Jamie</TableCell>
-        <TableCell>Approved</TableCell>
-        <TableCell>Requires call</TableCell>
-      </TableRow>
-      <TableRow>
-        <TableCell>Jill</TableCell>
-        <TableCell>Denied</TableCell>
-        <TableCell>None</TableCell>
-      </TableRow>
+      
     </TableBody>
   </Table>
         </SafeAreaView>

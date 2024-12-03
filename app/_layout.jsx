@@ -8,6 +8,24 @@ const [name, setName] =useState('');
 const [msg, setMsg] =useState('');
 const [bdayImage, setBdayImage] = useState('');
 
+const getData = () =>{
+  fetch("http://localhost:3000/birthday")
+  .then((res)=> res.json())
+  .then(resJson => {
+    console.log(resJson)
+  }).catch(e=> {console.log(e)})
+}
+
+const addCard =() =>{
+  fetch("http://localhost:3000/birthday"{
+    method: "POSt"
+  })
+}
+
+useEffect(()=> {
+  getData();
+}, [])
+
 
 
 function enterName(){
@@ -31,7 +49,7 @@ function enterName(){
         />
          <TextInput
           style={styles.input}
-          onChangeText={enterName}
+           onChangeText={enterName} //=> {this.setState({email:text})}
           value={msg}
           placeholder="Enter message"
           keyboardType="numeric"
@@ -43,6 +61,7 @@ function enterName(){
   title="Enter"
   color="orange"
   accessibilityLabel="Learn more about this purple button"
+  
 />
         {/* <Pressable>
           <Text onPress={() => {console.log('button pressed')}}>
@@ -59,11 +78,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'pink',
     padding:15,
     margin:20,
-    borderRadius:0.10
+    borderRadius:0.10,
+    flex:1,
+    paddingHorizontal:20
   },
   input:{
-    borderRadius:0.10,
+    borderRadius:5,
     borderColor:"black",
-    color:"#ffffff"
+    color:"white",
+    padding:8,
+    marginBottom:5,
+    backgroundColor: 'grey',
   }
 })
